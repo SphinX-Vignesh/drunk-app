@@ -9,9 +9,10 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: 'poppins', sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
             height: 100vh;
             background-color: #f0f0f0;
@@ -79,13 +80,14 @@
         }
 
         .card {
-            background: linear-gradient(135deg, #ffddc1, #e4e5f1);
+            background: url('/mnt/data/image.png') no-repeat center center;
+            background-size: cover;
             width: 315px;
             height: 225px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 10px;
+            border-radius: 20px; /* Added corner radius */
         }
 
         #prompt-box {
@@ -126,6 +128,22 @@
             background-color: #5f35b1;
         }
 
+        /* Footer copyright notice */
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            background-color: #f0f0f0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #999;
+        }
+
         /* Responsive design for mobile */
         @media (max-width: 768px) {
             .card-container {
@@ -163,7 +181,11 @@
                 <button id="generate-btn" class="generate-btn">Generate New Prompt</button>
             </div>
         </div>
+        <div class="footer">
+            <p>&copy; SphinX 2024</p>
+        </div>
     </div>
+
     <script>
         // List of prompts
         const prompts = [
