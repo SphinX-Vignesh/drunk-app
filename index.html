@@ -39,7 +39,7 @@
         }
 
         .app-title {
-            font-size: 24px;
+            font-size: 20px; /* Reduced font size */
             font-weight: bold;
         }
 
@@ -65,7 +65,7 @@
             align-items: center;
             flex-grow: 1;
             padding: 20px;
-            margin-top: -30px; /* Move the card a bit higher */
+            margin-top: -50px; /* Move the card higher by 15% */
         }
 
         .frame {
@@ -77,17 +77,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 15px; /* Padding added to the frame */
         }
 
         .card {
             background: url('image.jpg') no-repeat center center;
             background-size: cover;
-            width: 315px;
-            height: 225px;
+            width: 100%; /* Full width of the frame */
+            height: 100%; /* Full height of the frame */
+            border-radius: 25px; /* Changed the corner radius to 25px */
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 40px; /* Added corner radius */
         }
 
         #prompt-box {
@@ -134,14 +135,14 @@
             justify-content: center;
             align-items: center;
             padding: 10px 0;
-            background-color: #f0f0f0;
+            background-color: #4A4A8C; /* Same color as the app */
             width: 100%;
         }
 
         .footer p {
             margin: 0;
             font-size: 14px;
-            color: #999;
+            color: white; /* Changed text color to white */
         }
 
         /* Responsive design for mobile */
