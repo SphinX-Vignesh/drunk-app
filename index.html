@@ -64,118 +64,15 @@
             align-items: center;
             flex-grow: 1;
             padding: 20px;
+            margin-top: -30px; /* Move the card a bit higher */
         }
 
-        .card {
-            background: linear-gradient(135deg, #ffddc1, #e4e5f1);
-            height: 150px;
-            width: 100%;
-            max-width: 400px;
+        .frame {
+            width: 345px;
+            height: 255px;
+            background-color: white;
+            border-radius: 40px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             display: flex;
             justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-
-        #prompt-box {
-            font-size: 20px;
-            color: #333;
-            text-align: center;
-        }
-
-        /* Footer for prompt generation */
-        .prompt-footer {
-            text-align: center;
-        }
-
-        .prompt-footer h2 {
-            margin: 0;
-            color: #4A4A8C;
-        }
-
-        .prompt-footer p {
-            margin: 5px 0 20px;
-            color: #555;
-        }
-
-        /* Generate button */
-        .generate-btn {
-            background-color: #7e45ec;
-            color: white;
-            padding: 15px 25px;
-            font-size: 16px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .generate-btn:hover {
-            background-color: #5f35b1;
-        }
-
-        /* Responsive design for mobile */
-        @media (max-width: 768px) {
-            .card-container {
-                padding: 10px;
-            }
-
-            .card {
-                width: 90%;
-            }
-
-            .generate-btn {
-                width: 100%;
-                padding: 15px 0;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="app">
-        <div class="nav-bar">
-            <span class="app-title">Random Prompt App</span>
-            <button class="close-btn">Close</button>
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <div id="prompt-box">
-                    <span id="currentPrompt">{currentPrompt}</span>
-                </div>
-            </div>
-            <div class="prompt-footer">
-                <h2>Prompt</h2>
-                <p>Read your prompt out loud</p>
-                <button id="generate-btn" class="generate-btn">Generate New Prompt</button>
-            </div>
-        </div>
-    </div>
-    <script>
-        // List of prompts
-        const prompts = [
-            "What’s your favorite way to relax?",
-            "What's a book that changed your life?",
-            "If you could live in any country for a year, where would it be?",
-            "What's your go-to meal when you want comfort food?",
-            "What’s the most exciting thing you did in the last month?",
-            "If you had unlimited time, what hobby would you start?"
-        ];
-
-        // Function to generate random prompt
-        function generatePrompt() {
-            const randomIndex = Math.floor(Math.random() * prompts.length);
-            document.getElementById("currentPrompt").innerText = prompts[randomIndex];
-        }
-
-        // Event listener for the "Generate New Prompt" button
-        document.getElementById("generate-btn").addEventListener("click", generatePrompt);
-
-        // Event listener for the "Close" button
-        document.querySelector(".close-btn").addEventListener("click", () => {
-            alert("Close button clicked");
-        });
-    </script>
-</body>
-</html>
+            align
