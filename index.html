@@ -142,7 +142,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px 0;
+            padding: 20px 0;
             background-color: #ffffff; /* Same color as the app */
             width: 100%;
             font-weight: 600;
@@ -193,7 +193,7 @@
             </div>
         </div>
         <div class="footer">
-            <p>&copy; SphinX 2024</p>
+            <p id="footer-year">&copy; SphinX 2024</p>
         </div>
     </div>
 
@@ -317,6 +317,8 @@
                 window.location.href = 'about:blank'; // Redirect to a blank page
             }
         }); // Add the missing closing bracket here
+        const currentYear = new Date().getFullYear();
+        document.getElementById("footer-year").innerText = `© SphinX ${currentYear}`;
     </script>
 </body>
 </html>
